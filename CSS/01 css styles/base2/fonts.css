@@ -1,0 +1,15 @@
+article p, h3 {
+    font-family: 'Bad Script', cursive;
+}
+
+header {
+    text-align: right;
+}
+
+h3 {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 16px;
+}
