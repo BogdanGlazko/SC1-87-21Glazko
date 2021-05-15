@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <style>
+        form label {
+            display: inline-block;
+            width: 100px;
+        }
+
+        form div {
+            margin-bottom: 10px;
+        }
+
+        .error {
+            color: red;
+            margin-left: 5px;
+        }
+
+        label.error {
+            display: inline;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form>
+        <div>Password:</div>
+        <input type="password" class="password">
+        
+        <div>Accept your password:</div>
+        <input type="password" class="cor_password">
+        
+        <div class="error"></div>
+    
+        <input type="submit" value="Send" id="submit">
+    
+    </form>
+
+
+
+
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $(".cor_password").on("keyup", function() { 
+	
+    var value_input1 = $(".password").val(); 
+    var value_input2 = $(this).val(); 
+    
+    if(value_input1 != value_input2) { 
+    
+        $(".error").html("Пароли не совпадают!"); 
+        $("#submit").attr("disabled", "disabled"); 
+        
+    } else { 
+    
+        $("#submit").removeAttr("disabled");  /
+        $(".error").html("");
+        
+    }
+    
+});
+});
+
+
+
+
+
+
+
+
+
+
+            // $('#btn').click(function () {
+            //                 $('#load').fadeToggle();
+
+
+            //             })
+            //             $("input:password")
+            //                 .css("border", "5px red solid");
+
+
+            //             $("form").submit(function (e) {
+            //                 e.preventDefault();
+            //                 var value = $("input[type=password]").val();
+            //                 if (value === "") {
+            //                     alert("enter password")
+            //                 }
+            //                 else {
+            //                     console.log("form send");
+            //                 }
+
+
+
+
+
+
+            // $('#btn').on('click', function () {
+            //     $('#load').animate({
+            //         marginLeft: 200,
+
+            //     }, 2000, widt)
+            // });
+            // function widt() {
+            //     $('#btn').animate({
+            //         width: 200
+            //     }, 2000)
+            // }
+        
+    </script>
+</body>
+
+</html>

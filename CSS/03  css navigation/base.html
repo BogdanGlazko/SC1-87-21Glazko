@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav {
+            width: 950px;
+            margin: 0 auto 30px;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .gmenu>li {
+            display: inline-block;
+            margin-right: 65px;
+            position: relative;
+        }
+
+        li {
+            display: block;
+            padding: 10px 15px;
+            outline: none;
+        }
+
+        .submenu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            -webkit-transition: 1s;
+        }
+
+        .three ul {
+            background: #1bb6ae;
+        }
+
+        .three ul a {
+            color: #62a10f;
+        }
+
+        .three .submenu {
+            visibility: hidden;
+            opacity: 0;
+            background: #919e7d;
+        }
+
+        .three ul li:hover .submenu {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        @media all and (max-width: 736px) {
+
+            .gmenu>li {
+                display: block;
+                margin-right: 60px;
+                position: relative;
+                padding: 15px 5px;
+            }
+
+            .three ul {
+                background: #87ec03;
+                width: 115px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="three">
+        <ul class="gmenu">
+            <li>Понедельник</li>
+            <li>Вторник</li>
+            <li>Среда
+                <ul class="submenu"></i>
+                    <li>завтрак</li>
+                    <li>обед</li>
+                    <li>ужин</li>
+                </ul>
+            </li>
+            <li>Четверг</li>
+            <li>Пятница</li>
+            <li>Суббота</li>
+        </ul>
+    </nav>
+</body>
+
+</html>

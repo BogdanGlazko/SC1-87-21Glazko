@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Tables</title>
+    <style>
+        table {
+            border-collapse: separate;
+            border-color: blue;
+            border: limegreen;
+        }
+
+        tr:nth-child(1) td {
+            background-color: magenta;
+        }
+
+        tr:nth-child(3) td {
+            background-color: mediumseagreen;
+        }
+
+        tr:nth-child(5) td {
+            background-color: olive;
+        }
+
+        tr td:nth-child(1) {
+            text-align: left;
+        }
+
+        caption {
+            caption-side: bottom;
+
+        }
+
+        tr td:hover:nth-child(5) {
+            background: plum;
+            cursor: pointer;
+        }
+
+        tr td:hover:nth-child(6) {
+            background: red;
+            cursor: pointer;
+        }
+    </style>
+  </head>
+  <body>
+    <table border="1">
+        <caption>Выборка</caption>
+        <tr>
+            <td>ФИО</td>
+            <td>ПОЛ</td>
+            <td>ДОЛЖНОСТЬ</td>
+            <td>ДАТА РОЖДЕНИЯ</td>
+            <td>ДАННЫЕ1</td>
+            <td>ДАННЫЕ2</td>
+        </tr>
+        <tr>
+            <td>ИВАНОВ ИВАН ИВОНОВИЧ</td>
+            <td>М</td>
+            <td>НАЧАЛЬТНИК</td>
+            <td>23.01.1955</td>
+            <td>5135</td>
+            <td>6856</td>
+
+        </tr>
+        <tr>
+            <td>КОМАРОВ СТЕПАН ПЕТРОВИЧ</td>
+            <td>М</td>
+            <td>СЕКРЕТАРЬ</td>
+            <td>25.01.1968</td>
+            <td>52143</td>
+            <td>6874</td>
+
+        </tr>
+        <tr>
+            <td>СТРЕЛЬЦОВ ИВАН ЕГОРОВИЧ</td>
+            <td>М</td>
+            <td>БУХГАЛТЕР</td>
+            <td>01.03.1969</td>
+            <td>5684</td>
+            <td>65732</td>
+
+        </tr>
+        <tr>
+            <td>КОЗЛОВ ЕВГЕНИЙ ПЕТРОВИЧ</td>
+            <td>М</td>
+            <td>ВОДИТЕЛЬ1</td>
+            <td>14.09.1976</td>
+            <td>5542</td>
+            <td>60587</td>
+
+        </tr>
+        <tr>
+            <td>ВЯЛЫЙ ГРИГОРИЙ ИГОРЕВИЧ</td>
+            <td>М</td>
+            <td>ВОДИТЕЛЬ2</td>
+            <td>18.06.1981</td>
+            <td>55132</td>
+            <td>62757</td>
+
+        </tr>
+    </table>
+    <button class = "show">Отобразить</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+    <script>
+        $( document ).ready(function(){
+          $( "tr" ).click(function(){ 
+            $( "td" ).slideUp(); 
+          });
+          $( ".show" ).click(function(){ 
+            $( "td" ).slideDown(); 
+          });
+        });
+            </script>
+
+  </body>
+</html>

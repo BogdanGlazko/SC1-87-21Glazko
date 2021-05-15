@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Your page title here :)</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <style type="text/css">
+    * {
+      font-family: Arial, Helvetica, sans-serif
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    }
+
+    div.nav {
+      font-size: 15px;
+    }
+    #firstt{
+      margin-left: 50px;
+    }
+  </style>
+
+</head>
+
+<BODY>
+
+  <div class="container">
+    <div class="raw">
+    <div class="raw">
+      <div class="six column"></div>
+      <h4>HOW-TO: Программа на Python, Часть 1</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="four columns">
+      <div>
+        <div class="nav">
+          <ul>
+            <li><a href="python_01_link.html">Программа на Python — часть 1</a></li>
+            <li><a href="python_02_link.html">Программа на Python — часть 2</a></li>
+            <li><a href="python_03_link.html">Программа на Python — часть 3</a></li>
+          </ul>
+          <h4><a id="top" name="top">Содержание</a></h2>
+          <h4>HOW-TO: Программа на Python, Часть 1</h3>
+          <ul>
+            <li><a href="#firsts">Наша первая программа</a></li>
+            <li><a href="#loops">Пример цикла For</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="eight columns">
+      <p>Из множества существующих языков программирования Python — один из самых лёгких в изучении. Он создан в
+        конце 80-х годов XX века, но с тех пор он сильно изменился. Хотя Python входит в состав большинства
+        дистрибутивов Linux, на него часто не обращают внимания при выборе языка для изучения. В этой статье мы
+        рассмотрим создание консольных приложений, а в следующей — программирование графических интерфейсов
+        (<u>GUI</u>). Давайте создадим простую программу прямо сейчас.</p>
+      <h2><a id="firsts" name="firsts">Наша первая программа</a></h2>
+      <a class="link_top" href="#top">UP</a>
+      <p>Наберём код в текстовом редакторе (например, в <b>gedit</b>). Потом мы разберёмся, что делает каждая строка
+        и пойдём дальше.</p>
+      <p>Введите эти 4 строки:</p>
+      <div class="python_code">
+        #!/usr/bin/env python
+        print 'Hello. I am a python program.'
+        name = raw_input("What is your name?")
+        print "Hello there, " + name + "!"
+      </div>
+      <p>Это всё. Сохраните файл как <strong>hello.py</strong> в любом месте. Я предлагаю сохранить его в папке
+        <b>python_examples</b> в домашнем каталоге. Этот пример показывает, как просто написать программу на Python.
+        Для запуска программы нужно сделать её файл исполняемым. Для этого введите в терминале
+      </p>
+      <div class="shell_command">chmod +x hello.py</div>
+      <p>в папке, в которой вы сохранили программу. Теперь запустите её.</p>
+      <div class="shell_command">greg@earth:~/python_examples$ ./hello.py
+        Hello. I am a python program.
+        What is your name? Ferd Burphel
+        Hello there, Ferd Burphel!
+        greg@earth:~/python_examples$</pre>
+        <p>Вот и всё.</p>
+        <h2><a id="loops" name="loops">Пример цикла For</a></h2>
+        <a class="link_top" href="#top">UP</a>
+        <p>Теперь давайте рассмотрим пример программирования цикла. Запустите текстовый редактор и наберите
+          следующую программу:</p>
+        <div class="python_code">#!/usr/bin/env python
+          for cntr in range(0,10):
+          print cntr</pre>
+          <p><em>Не забудьте поставить символ табуляции перед строкой «print cntr».</em> Это важно. В Python для
+            указания на блоки кода используются не круглые «<b>(</b>» и фигурные «<b>{</b>» скобки как в других
+            языках программирования, а отступы.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
